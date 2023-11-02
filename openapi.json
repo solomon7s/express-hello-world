@@ -1,0 +1,95 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Sample extension API",
+      "version": "1.0.0",
+      "description": "Demo example to be used with IBM Watson"
+    },
+    "servers": [
+        {
+            "url": "https://test-playgroud.onrender.com"
+        }
+    ],
+    "paths": {
+      "/first": {
+        "get": {
+          "summary": "Get the first endpoint",
+          "description":"First endpoint demo response with one property",
+          "operationId": "getFirst",
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Hello I am the first endpoint"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/second": {
+        "get": {
+          "summary": "Get the second endpoint",
+          "description":"Second endpoint demo response with one property",
+          "operationId": "getSecond",
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "Hi There! I am the second endpoint"
+                      },
+                      "extra": {
+                        "type": "string",
+                        "example": "I am an extra field for testing"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/error": {
+        "get": {
+          "summary": "Get the error endpoint",
+          "description":"Error endpoint demo response with one property",
+          "operationId": "getError",
+          "responses": {
+            "401": {
+              "description": "Unauthorized",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "message": {
+                        "type": "string",
+                        "example": "I am just a bad error"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
